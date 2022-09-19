@@ -5,6 +5,6 @@ export const GpsData: ClientProviderOptions={
     name: 'GpsData',
     transport : Transport.TCP,
     options:{
-        port: 8000,
+        port: 5000,
     }
 }

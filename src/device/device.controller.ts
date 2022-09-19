@@ -1,5 +1,5 @@
 import { Controller, Get, Param } from '@nestjs/common';
-import { Device } from 'src/core/entities/device.entity';
+import { Device } from 'src/core/entities/device-location.entity';
 import { DeviceService } from './device.service';
 
 @Controller('device')

@@ -1,34 +1,14 @@
 import { EntitySchema } from "typeorm";
-import { Device } from "../entities/device.entity";
+import { DeviceLocation } from "../entity/device-location.entity";
 
-export const DeviceSchema = new EntitySchema<Device> ({
+export const DeviceSchema = new EntitySchema<DeviceLocation> ({
     name: 'Device',
-    target: Device,
+    target: DeviceLocation,
     columns:{
         id: {
             type: 'uuid',
             primary: true,
             generated: 'uuid',
-        },
-        title:{
-            type: String,
-            nullable: true,
-        },
-        serial:{
-            type: String,
-            unique: true,
-        },
-        pin:{
-            type: String,
-            nullable: true,
-        },
-        details:{
-            type: 'simple-json',
-            default:{},
-        },
-        createdAt:{
-            type:'date',
-            createDate: true,
-        }
+        }, 
     }
-}) 
+});

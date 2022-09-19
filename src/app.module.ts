@@ -4,6 +4,9 @@ import { ConfigModule } from '@nestjs/config';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { DeviceModule } from './device/device.module';
+import { ServerService } from './server/server.service';
+import { ServerModule } from './server/server.module';
+
 
 @Module({
   imports: [
@@ -20,8 +23,9 @@ import { DeviceModule } from './device/device.module';
     }
     ),
     DeviceModule,
+    ServerModule,
   ],
   controllers: [AppController],
-  providers: [AppService],
+  providers: [AppService, ServerService],
 })
 export class AppModule {}
