@@ -13,8 +13,9 @@ export const UserSchema = new EntitySchema<User> ({
             generated: 'uuid',
         },
         accountId:{
-            type: String,
-            unique: true,    
+            type: 'uuid',
+            unique: true,
+            generated: 'uuid',    
         },
         userName:{
             type: String,

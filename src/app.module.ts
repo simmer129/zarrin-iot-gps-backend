@@ -3,9 +3,9 @@ import { TypeOrmModule } from '@nestjs/typeorm';
 import { ConfigModule } from '@nestjs/config';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
-import { DeviceModule } from './device/device.module';
 import { ServerService } from './server/server.service';
 import { ServerModule } from './server/server.module';
+import { DeviceLocationModule } from './device-location/device-location.module';
 
 
 @Module({
@@ -22,8 +22,8 @@ import { ServerModule } from './server/server.module';
       synchronize: true,
     }
     ),
-    DeviceModule,
     ServerModule,
+    DeviceLocationModule,
   ],
   controllers: [AppController],
   providers: [AppService, ServerService],
