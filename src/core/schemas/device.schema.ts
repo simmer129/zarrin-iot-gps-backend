@@ -1,11 +1,9 @@
 import { EntitySchema } from "typeorm";
-import { DeviceLocation } from "../entity/device-location.entity";
-import { DevicePosition } from '../entity/device-position.entity';
-import { User } from '../entity/user.entity';
+import { Device } from "../entity/device.entity";
 
-export const DeviceLocationSchema = new EntitySchema<DeviceLocation> ({
-    name: 'DeviceLocation',
-    target: DeviceLocation,
+export const DeviceSchema = new EntitySchema<Device> ({
+    name: 'Device',
+    target: Device,
     columns:{
         id: {
             type: 'uuid',
@@ -36,12 +34,12 @@ export const DeviceLocationSchema = new EntitySchema<DeviceLocation> ({
     relations:{
         position:{
             type:'one-to-many',
-            target:DevicePosition,
+            target:'DevicePosition',
             nullable:true,
         },
         userAccount:{
             type:'many-to-one',
-            target:User,
+            target:'User',
             nullable:true,
         }
     }

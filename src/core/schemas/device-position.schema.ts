@@ -1,6 +1,6 @@
 import { DevicePosition } from '../entity/device-position.entity';
-import { Double, EntitySchema } from 'typeorm';
-import { DeviceLocation } from '../entity/device-location.entity';
+import { EntitySchema } from 'typeorm';
+
 export const DevicePositionSchema = new EntitySchema<DevicePosition>({
   name: 'DevicePosition',
   target: DevicePosition,
@@ -24,13 +24,6 @@ export const DevicePositionSchema = new EntitySchema<DevicePosition>({
     },
     recordNumber: {
       type: Number,
-    },
-  },
-  relations: {
-    deviceId: {
-      type: 'many-to-one',
-      target: DeviceLocation,
-      nullable:true,
     },
   },
 });
