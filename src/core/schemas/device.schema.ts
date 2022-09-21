@@ -22,9 +22,11 @@ export const DeviceSchema = new EntitySchema<Device> ({
         },
         type:{
             type:String,
+            nullable:true,
         },
         details:{
             type:String,
+            nullable:true,
         },
         createdAt:{
             type:Date,
@@ -33,7 +35,7 @@ export const DeviceSchema = new EntitySchema<Device> ({
     },
     relations:{
         position:{
-            type:'one-to-many',
+            type:'many-to-one',
             target:'DevicePosition',
             nullable:true,
         },

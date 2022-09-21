@@ -18,13 +18,13 @@ export class DeviceController {
         return this.deviceService.save(device);
     }
 
-    @Get()
+    @Get(':id')
     findById(@Param('id') id: string): Promise<Device>{
         return this.deviceService.findById(id);
     }
 
     @Get()
-    findAll(): Promise<Device>{
-        return this.findAll();
+    findAll(): Promise<Device[]>{
+        return this.deviceService.findAll();
     }
 }

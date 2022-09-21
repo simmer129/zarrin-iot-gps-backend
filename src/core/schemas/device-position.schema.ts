@@ -24,6 +24,7 @@ export const DevicePositionSchema = new EntitySchema<DevicePosition>({
     },
     recordNumber: {
       type: Number,
+      nullable:true,
     },
   },
 });
