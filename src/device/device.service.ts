@@ -15,8 +15,9 @@ export class DeviceService {
  }
 
  save(device: Device): Promise<Device>{
+   console.log(device);
     return this.deviceRepository.save(device);
- }
+   }
 
  findById(id: string): Promise<Device>{
     return this.deviceRepository.findOne({where:{id}});

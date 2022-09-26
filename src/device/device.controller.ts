@@ -16,6 +16,7 @@ export class DeviceController {
     @Post()
     save(@Body() device: Device): Promise<Device>{
         return this.deviceService.save(device);
+        console.table(device);
     }
 
     @Get(':id')

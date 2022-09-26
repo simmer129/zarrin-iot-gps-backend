@@ -11,6 +11,7 @@ export class UserController {
 
     @Post()
     save(@Body() user: User): Promise<User>{
+        console.log(user);
         return this.userService.save(user);
     }
 

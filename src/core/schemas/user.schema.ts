@@ -38,6 +38,7 @@ export const UserSchema = new EntitySchema<User> ({
         gender: {
             type: 'enum',
             enum: GenderType,
+            nullable: true,
         },
         avatar: {
             type: String,
@@ -49,11 +50,12 @@ export const UserSchema = new EntitySchema<User> ({
             type: String,
         },
         birthDate: {
-            type: Date,
+            type: String,
         },
         role: {
             type: 'enum',
             enum: UserRole,
+            nullable: true,
         },
         instagram: {
             type: String,
