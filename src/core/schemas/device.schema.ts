@@ -13,7 +13,7 @@ export const DeviceSchema = new EntitySchema<Device> ({
         rssi:{
             type:Number,
             nullable:true,
-            default:0,
+            default:1,
         },
         imei:{
             type:Number,
