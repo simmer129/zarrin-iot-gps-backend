@@ -11,12 +11,12 @@ export const DeviceSchema = new EntitySchema<Device> ({
             generated: 'uuid',
         },
         rssi:{
-            type:Number,
+            type:'bigint',
             nullable:true,
             default:1,
         },
         imei:{
-            type:Number,
+            type:'bigint',
             nullable:true,
             unique:true,
         },
@@ -35,7 +35,7 @@ export const DeviceSchema = new EntitySchema<Device> ({
     },
     relations:{
         position:{
-            type:'many-to-one',
+            type:'one-to-many',
             target:'DevicePosition',
             nullable:true,
         },

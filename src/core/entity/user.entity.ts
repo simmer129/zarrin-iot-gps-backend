@@ -1,9 +1,9 @@
+import { Device } from './device.entity';
 import { GenderType} from './gender-type.enum';
 import { UserRole } from './user-role.enum';
 
 export class User {
     id: string;
-    accountId: string;
     userName: string;
     password: string;
     mobile: number;
@@ -17,5 +17,6 @@ export class User {
     instagram: string;
     phoneNumber: number;
     address: string;
+    device: Device;
     createdAt: Date;
 }

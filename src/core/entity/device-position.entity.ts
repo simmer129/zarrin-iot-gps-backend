@@ -1,9 +1,11 @@
 import { Double } from 'typeorm';
+import { Device } from './device.entity';
 export class DevicePosition {
     id: string;
-    deviceId:string;
+    device:Device;
     lat:Double;
     lon:Double;
     speed:Double;
-    recordNumber:Number;
+    recordNumber:Double;
+    createdAt:Date;
 }

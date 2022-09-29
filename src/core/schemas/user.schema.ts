@@ -12,11 +12,6 @@ export const UserSchema = new EntitySchema<User> ({
             primary: true,
             generated: 'uuid',
         },
-        accountId:{
-            type: 'uuid',
-            unique: true,
-            generated: 'uuid',    
-        },
         userName:{
             type: String,
             nullable: true,
@@ -61,7 +56,7 @@ export const UserSchema = new EntitySchema<User> ({
             type: String,
         },
         phoneNumber: {
-            type: Number,
+            type: 'double precision',
         },
         address: {
             type:String,
@@ -70,7 +65,13 @@ export const UserSchema = new EntitySchema<User> ({
             type: Date,
             createDate: true,
         },
+    },
+    relations: {
+        device: {
+            type: 'one-to-many',
+            target: 'Device',
+            nullable: true,
+        }
     }
     
-    //TODO: add nullable true or false in type
 });
