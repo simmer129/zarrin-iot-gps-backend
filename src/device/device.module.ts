@@ -3,13 +3,13 @@ import { DeviceService } from './device.service';
 import { DeviceController } from './device.controller';
 import { DeviceSchema } from '../core/schemas/device.schema';
 import { TypeOrmModule } from '@nestjs/typeorm';
-import { DevicePositionSchema } from '../core/schemas/device-position.schema';
-import { UserSchema } from '../core/schemas/user.schema';
+import { AccountSchema } from 'src/core/schemas/account.schema';
+
 
 @Module({
   imports: [
     TypeOrmModule.forFeature([
-      DeviceSchema, DevicePositionSchema, UserSchema
+      DeviceSchema, AccountSchema
     ]) 
   ],
   providers: [DeviceService],

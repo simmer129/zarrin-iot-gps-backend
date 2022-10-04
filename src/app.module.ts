@@ -4,8 +4,7 @@ import { ConfigModule } from '@nestjs/config';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { DeviceModule } from './device/device.module';
-import { UserModule } from './user/user.module';
-import { DevicePositionModule } from './device-position/device-position.module';
+import { AuthModule } from './auth/auth.module';
 
 
 
@@ -24,8 +23,7 @@ import { DevicePositionModule } from './device-position/device-position.module';
     }
     ),
     DeviceModule,
-    UserModule,
-    DevicePositionModule,
+    AuthModule,
   
   ],
   controllers: [AppController],

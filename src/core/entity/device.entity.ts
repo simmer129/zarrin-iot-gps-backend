@@ -1,13 +1,16 @@
-import { DevicePosition } from './device-position.entity'; 
-import { User } from './user.entity';
+import { Account } from './account.entity';
+
 
 export class Device {
     id: string;
-    rssi: number;
-    imei: number;
-    type: string;
-    details: string;
-    userAccount: User;
-    position: DevicePosition;
+    name: string;
+    serial: number;
+    lat: number;
+    lon: number;
+    signal: number;
+    battery : number;
+    speed: number;
+    recordIndex: number;
+    account: Account;
     createdAt: Date;
 }

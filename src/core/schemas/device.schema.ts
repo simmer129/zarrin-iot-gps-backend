@@ -10,23 +10,37 @@ export const DeviceSchema = new EntitySchema<Device> ({
             primary: true,
             generated: 'uuid',
         },
-        rssi:{
-            type:'bigint',
-            nullable:true,
-            default:1,
-        },
-        imei:{
-            type:'bigint',
-            nullable:true,
-            unique:true,
-        },
-        type:{
+        name:{
             type:String,
             nullable:true,
         },
-        details:{
-            type:String,
+        serial:{
+            type:'bigint',
             nullable:true,
+        },
+        lat:{
+            type:'decimal',
+            nullable:true,
+        },
+        lon:{
+            type:'decimal',
+            nullable:true,
+        },
+        signal:{
+            type:'bigint',
+            nullable:true
+        },
+        battery:{
+            type:'bigint',
+            nullable:true
+        },
+        speed:{
+            type:'bigint',
+            nullable:true
+        },
+        recordIndex:{
+            type:'bigint',
+            nullable:true
         },
         createdAt:{
             type:Date,
@@ -34,15 +48,10 @@ export const DeviceSchema = new EntitySchema<Device> ({
         },
     },
     relations:{
-        position:{
-            type:'one-to-many',
-            target:'DevicePosition',
-            nullable:true,
-        },
-        userAccount:{
-            type:'many-to-one',
-            target:'User',
-            nullable:true,
+        account: {
+            type: 'many-to-one',
+            target: 'Account',
+            nullable: true,
         }
     }
 });

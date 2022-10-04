@@ -10,11 +10,30 @@ export class DeviceService {
     private deviceRepository: Repository<Device>,
  ){ }   
 
- insertGroup (device: Device[]): Promise<Device[]>{
-    return this.deviceRepository.save(device);
+ insertGroup (device : any): Promise<any[]>{
+
+//    device.location.forEach((element, i) => {
+//       if (element.length!=0){
+//       const dbData  = {
+//           name : "gps",
+//           serial : device.SN,
+//           lat : element.LA,
+//           lon : element.LO,
+//           signal : element.SI,
+//           battery : element.BA,
+//           speed: element.SP,
+//           recordIndex : element.RI
+//       }
+//       console.log("looooooogs is : "+ JSON.stringify(dbData)) 
+//    }else{
+//          console.log("element is empty");
+//       }         
+//   });
+   console.log("kjsaldsd: ",JSON.stringify (device));
+   return this.deviceRepository.save(device);
  }
 
- save(device: Device): Promise<Device>{
+ save(device: any[]): Promise<any[]>{
    console.log(device);
     return this.deviceRepository.save(device);
    }

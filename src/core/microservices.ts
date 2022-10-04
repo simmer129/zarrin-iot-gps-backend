@@ -1,10 +1,10 @@
 import { ClientProviderOptions, Transport } from "@nestjs/microservices";
 
 
-export const GpsData: ClientProviderOptions={
-    name: 'GpsData',
-    transport : Transport.TCP,
-    options:{
-        port: 5000,
+export const UserMicroservice: ClientProviderOptions = {
+    name: 'USER_SERVICE',
+    transport: Transport.TCP,
+    options: {
+      port: 8081,
     }
-}
+  }
