@@ -4,16 +4,14 @@ import { DeviceController } from './device.controller';
 import { DeviceSchema } from '../core/schemas/device.schema';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { AccountSchema } from 'src/core/schemas/account.schema';
-
+import { DeviceLogSchema } from '../core/schemas/deviceLog.schema';
 
 @Module({
   imports: [
-    TypeOrmModule.forFeature([
-      DeviceSchema, AccountSchema
-    ]) 
+    TypeOrmModule.forFeature([DeviceSchema, AccountSchema, DeviceLogSchema]),
   ],
   providers: [DeviceService],
   controllers: [DeviceController],
-  exports: [TypeOrmModule]
+  exports: [TypeOrmModule],
 })
 export class DeviceModule {}
