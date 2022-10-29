@@ -7,7 +7,7 @@ export class DeviceLog {
   signal: number;
   battery: number;
   speed: number;
-  deviceTime: Date;
+  deviceTime: string;
   createAt: Date;
   device: Device;
 }

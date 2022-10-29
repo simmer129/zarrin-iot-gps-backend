@@ -1,4 +1,4 @@
-import { EntitySchema } from 'typeorm';
+import { EntitySchema, Timestamp } from 'typeorm';
 import { DeviceLog } from '../entity/device-log.entity';
 
 export const DeviceLogSchema = new EntitySchema<DeviceLog>({
@@ -31,7 +31,7 @@ export const DeviceLogSchema = new EntitySchema<DeviceLog>({
       nullable: true,
     },
     deviceTime: {
-      type: Date,
+      type: String,
       nullable: true,
     },
     createAt: {

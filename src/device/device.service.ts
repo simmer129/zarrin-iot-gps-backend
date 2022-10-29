@@ -41,7 +41,7 @@ export class DeviceService {
           device: devices,
           lat: element.LA,
           lon: element.LO,
-          signal: element.SI,
+          signal: device.Si,
           battery: element.BA,
           speed: element.SP,
           deviceTime: element.TI,
